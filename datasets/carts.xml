@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<carts>
+  <cart>
+    <cart_id>HD001</cart_id>
+    <date>2026-09-03</date>
+    <employee_id>NV002</employee_id>
+    <customer_id>KH006</customer_id>
+    <status>Hoàn thành</status>
+    <items>
+      <item><product_id>10</product_id><quantity>3</quantity><color>Đen</color><size>1TB</size><price>109</price></item>
+      <item><product_id>3</product_id><quantity>3</quantity><color>Nâu</color><size>XL</size><price>55.99</price></item>
+    </items>
+  </cart>
+  <cart>
+    <cart_id>HD002</cart_id>
+    <date>2026-09-10</date>
+    <employee_id>NV003</employee_id>
+    <customer_id>KH002</customer_id>
+    <status>Hoàn thành</status>
+    <items>
+      <item><product_id>12</product_id><quantity>2</quantity><color>Xanh dương</color><size>4TB</size><price>114</price></item>
+      <item><product_id>6</product_id><quantity>2</quantity><color>Vàng</color><size>Size 8</size><price>168</price></item>
+    </items>
+  </cart>
+  <cart>
+    <cart_id>HD003</cart_id>
+    <date>2026-09-18</date>
+    <employee_id>NV003</employee_id>
+    <customer_id>KH003</customer_id>
+    <status>Hoàn thành</status>
+    <items>
+      <item><product_id>19</product_id><quantity>1</quantity><color>Hồng</color><size>M</size><price>7.95</price></item>
+      <item><product_id>18</product_id><quantity>1</quantity><color>Đỏ</color><size>S</size><price>9.85</price></item>
+      <item><product_id>4</product_id><quantity>3</quantity><color>Xám</color><size>S</size><price>15.99</price></item>
+    </items>
+  </cart>
+  <cart>
+    <cart_id>HD004</cart_id>
+    <date>2026-09-25</date>
+    <employee_id>NV004</employee_id>
+    <customer_id>KH001</customer_id>
+    <status>Hoàn thành</status>
+    <items>
+      <item><product_id>7</product_id><quantity>1</quantity><color>Vàng hồng</color><size>Size 8</size><price>9.99</price></item>
+      <item><product_id>10</product_id><quantity>1</quantity><color>Đen</color><size>1TB</size><price>109</price></item>
+    </items>
+  </cart>
+  <cart>
+    <cart_id>HD005</cart_id>
+    <date>2026-10-02</date>
+    <employee_id>NV002</employee_id>
+    <customer_id>KH003</customer_id>
+    <status>Hoàn thành</status>
+    <items>
+      <item><product_id>18</product_id><quantity>2</quantity><color>Đỏ</color><size>S</size><price>9.85</price></item>
+      <item><product_id>10</product_id><quantity>3</quantity><color>Đen</color><size>1TB</size><price>109</price></item>
+    </items>
+  </cart>
+  <cart>
+    <cart_id>HD006</cart_id>
+    <date>2026-10-06</date>
+    <employee_id>NV004</employee_id>
+    <customer_id>KH006</customer_id>
+    <status>Hoàn thành</status>
+    <items>
+      <item><product_id>10</product_id><quantity>1</quantity><color>Đen</color><size>1TB</size><price>109</price></item>
+      <item><product_id>19</product_id><quantity>2</quantity><color>Xám</color><size>L</size><price>7.95</price></item>
+      <item><product_id>16</product_id><quantity>2</quantity><color>Đen</color><size>M</size><price>29.95</price></item>
+    </items>
+  </cart>
+  <cart>
+    <cart_id>HD007</cart_id>
+    <date>2026-10-12</date>
+    <employee_id>NV004</employee_id>
+    <customer_id>KH001</customer_id>
+    <status>Hoàn thành</status>
+    <items>
+      <item><product_id>16</product_id><quantity>1</quantity><color>Đen</color><size>S</size><price>29.95</price></item>
+      <item><product_id>3</product_id><quantity>1</quantity><color>Nâu</color><size>L</size><price>55.99</price></item>
+    </items>
+  </cart>
+  <cart>
+    <cart_id>HD008</cart_id>
+    <date>2026-10-15</date>
+    <employee_id>NV002</employee_id>
+    <customer_id>KH003</customer_id>
+    <status>Hoàn thành</status>
+    <items>
+      <item><product_id>8</product_id><quantity>3</quantity><color>Bạc</color><size>Free size</size><price>10.99</price></item>
+    </items>
+  </cart>
+  <cart>
+    <cart_id>HD009</cart_id>
+    <date>2026-10-21</date>
+    <employee_id>NV003</employee_id>
+    <customer_id>KH004</customer_id>
+    <status>Hoàn thành</status>
+    <items>
+      <item><product_id>18</product_id><quantity>3</quantity><color>Trắng</color><size>S</size><price>9.85</price></item>
+    </items>
+  </cart>
+  <cart>
+    <cart_id>HD010</cart_id>
+    <date>2026-10-27</date>
+    <employee_id>NV004</employee_id>
+    <customer_id>KH006</customer_id>
+    <status>Đang giao</status>
+    <items>
+      <item><product_id>2</product_id><quantity>3</quantity><color>Trắng</color><size>XL</size><price>22.3</price></item>
+      <item><product_id>6</product_id><quantity>3</quantity><color>Vàng</color><size>Size 8</size><price>168</price></item>
+    </items>
+  </cart>
+  <cart>
+    <cart_id>HD011</cart_id>
+    <date>2026-11-01</date>
+    <employee_id>NV004</employee_id>
+    <customer_id>KH001</customer_id>
+    <status>Đang giao</status>
+    <items>
+      <item><product_id>6</product_id><quantity>1</quantity><color>Vàng</color><size>Size 8</size><price>168</price></item>
+    </items>
+  </cart>
+  <cart>
+    <cart_id>HD012</cart_id>
+    <date>2026-11-03</date>
+    <employee_id>NV002</employee_id>
+    <customer_id>KH001</customer_id>
+    <status>Chờ xử lý</status>
+    <items>
+      <item><product_id>4</product_id><quantity>3</quantity><color>Xám</color><size>L</size><price>15.99</price></item>
+    </items>
+  </cart>
+</carts>

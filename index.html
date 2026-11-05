@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Mini Shop - Nguyễn Thị Thùy Trang - K244060747</title>
+    <link rel="stylesheet" href="css/main.css"/>
+</head>
+<body>
+    <!-- ================= HEADER + NAV (MENU) ================= -->
+    <header class="site-header">
+        <h1 class="logo">Mini Shop</h1>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html" class="active">Trang chủ</a></li>
+                <li><a href="admin.html">Quản trị (Admin)</a></li>
+            </ul>
+        </nav>
+
+        <!-- Nút giỏ hàng + Mini-cart (position: absolute) -->
+        <div class="cart-area">
+            <button id="btnCart" class="btn-cart" type="button">Giỏ hàng <span id="cartCount" class="cart-count">0</span></button>
+            <div id="miniCart" class="mini-cart">
+                <div class="mini-head">
+                    <strong>Giỏ hàng của bạn</strong>
+                    <button id="miniCartClose" class="x" type="button">✕</button>
+                </div>
+                <div id="miniCartBody"></div>
+                <div class="mini-foot">
+                    <button id="btnClearCart" class="btn btn-view" type="button">Xóa giỏ</button>
+                    <button id="btnCheckout" class="btn btn-add" type="button">Thanh toán</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="layout">
+        <!-- ================= ASIDE: FORM TÌM KIẾM NÂNG CAO ================= -->
+        <aside class="sidebar">
+            <h2>Tìm kiếm nâng cao</h2>
+            <form id="frmSearch" name="frmSearch" autocomplete="off">
+                <label for="txtKeyword">Từ khóa</label>
+                <input type="text" id="txtKeyword" name="txtKeyword" placeholder="Tên sản phẩm..."
+                       maxlength="50" pattern="[A-Za-z0-9À-ỹ\s\-']{0,50}"
+                       title="Chỉ gồm chữ, số, khoảng trắng, dấu - và dấu ' (tối đa 50 ký tự)"/>
+
+                <fieldset>
+                    <legend>Khoảng giá ($)</legend>
+                    <div class="row2">
+                        <input type="number" id="numMin" name="numMin" placeholder="Từ" min="0" max="10000" step="0.01" title="Giá từ 0 đến 10000"/>
+                        <input type="number" id="numMax" name="numMax" placeholder="Đến" min="0" max="10000" step="0.01" title="Giá từ 0 đến 10000"/>
+                    </div>
+                </fieldset>
+
+                <label for="selColor">Màu sắc</label>
+                <select id="selColor" name="selColor">
+                    <option value="">-- Tất cả màu --</option>
+                </select>
+
+                <label for="numRating">Rating tối thiểu (0 – 5)</label>
+                <input type="number" id="numRating" name="numRating" value="0" min="0" max="5" step="0.5" required
+                       title="Nhập số sao từ 0 đến 5 (bước 0.5)"/>
+
+                <label for="selCategory">Danh mục</label>
+                <select id="selCategory" name="selCategory">
+                    <option value="">-- Tất cả danh mục --</option>
+                </select>
+
+                <label class="check"><input type="checkbox" id="chkStock" name="chkStock"/> Chỉ hiện sản phẩm còn hàng</label>
+
+                <div class="row2">
+                    <button type="submit" class="btn btn-add">Tìm kiếm</button>
+                    <button type="reset" class="btn btn-view">Xóa lọc</button>
+                </div>
+            </form>
+        </aside>
+
+        <!-- ================= MAIN: DANH SÁCH SẢN PHẨM ================= -->
+        <main>
+            <section id="products">
+                <h2>Danh sách sản phẩm</h2>
+                <p id="resultCount" class="result-count"></p>
+                <!-- Câu 4: duy nhất 1 Event Listener gắn trên container này -->
+                <div id="productGrid" class="grid"></div>
+            </section>
+        </main>
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+        <p>© 2026 Mini Shop — Sinh viên: <strong>Nguyễn Thị Thùy Trang</strong> — MSSV: <strong>K244060747</strong></p>
+    </footer>
+
+    <!-- Modal dùng chung (Xem nhanh, Rating Detail) -->
+    <div id="modal" class="modal">
+        <div class="modal-box">
+            <div class="modal-head"><h3 id="modalTitle"></h3><button id="modalClose" class="x" type="button">✕</button></div>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Modal thanh toán (Câu 7) -->
+    <div id="checkout" class="modal">
+        <div class="modal-box">
+            <div class="modal-head"><h3>Thanh toán</h3><button id="checkoutClose" class="x" type="button">✕</button></div>
+            <div id="checkoutForm">
+                <p>Đơn hàng: <strong id="checkoutTotal"></strong></p>
+                <form id="frmCheckout" name="frmCheckout" novalidate autocomplete="off">
+                    <label for="fullname">Họ và tên</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Nguyễn Văn A"/>
+                    <span class="err" id="err-fullname"></span>
+
+                    <label for="phone">Số điện thoại</label>
+                    <input type="text" id="phone" name="phone" placeholder="0912345678"/>
+                    <span class="err" id="err-phone"></span>
+
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" placeholder="ten@gmail.com"/>
+                    <span class="err" id="err-email"></span>
+
+                    <label for="address">Địa chỉ giao hàng</label>
+                    <input type="text" id="address" name="address" placeholder="Số nhà, đường, quận/huyện, tỉnh/thành"/>
+                    <span class="err" id="err-address"></span>
+
+                    <label for="payment">Phương thức thanh toán</label>
+                    <select id="payment" name="payment">
+                        <option>Thanh toán khi nhận hàng (COD)</option>
+                        <option>Chuyển khoản ngân hàng</option>
+                        <option>Ví điện tử</option>
+                    </select>
+
+                    <button type="submit" class="btn btn-add full">Xác nhận thanh toán</button>
+                </form>
+            </div>
+            <div id="checkoutDone" style="display:none">
+                <p class="success">Thanh toán thành công!</p>
+                <p>Mã đơn hàng của bạn: <strong id="orderCode"></strong></p>
+                <p>Dữ liệu đơn hàng đã được lưu vào Localstorage.</p>
+                <button id="checkoutDoneClose" class="btn btn-add full" type="button">Đóng</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="js/common.js"></script>
+    <script src="js/review.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/checkout.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

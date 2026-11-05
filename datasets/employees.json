@@ -1,0 +1,34 @@
+[
+  {
+    "id": "NV001",
+    "username": "admin",
+    "password": "admin123",
+    "fullname": "Nguyễn Thị Thùy Trang",
+    "role": "admin",
+    "phone": "0901000001"
+  },
+  {
+    "id": "NV002",
+    "username": "nv_lan",
+    "password": "lan123",
+    "fullname": "Trần Thị Lan",
+    "role": "sales",
+    "phone": "0901000002"
+  },
+  {
+    "id": "NV003",
+    "username": "nv_minh",
+    "password": "minh123",
+    "fullname": "Lê Quang Minh",
+    "role": "sales",
+    "phone": "0901000003"
+  },
+  {
+    "id": "NV004",
+    "username": "nv_huy",
+    "password": "huy123",
+    "fullname": "Phạm Gia Huy",
+    "role": "sales",
+    "phone": "0901000004"
+  }
+]

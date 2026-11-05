@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8"/>
+    <title>Câu 1 - Tạo products.xml từ fakestoreapi</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { font-family: "Times New Roman", Times, serif; margin: 24px auto; max-width: 1000px; padding: 0 16px; background: #fffdf5; color: #332b17; }
+        h1 { color: #5a4500; }
+        button { padding: 8px 14px; margin-right: 8px; border: 0; border-radius: 6px; background: #ffd84d; color: #3f3108; font: inherit; font-weight: bold; cursor: pointer; }
+        button:disabled { cursor: wait; opacity: .65; }
+        textarea { width: 100%; height: 320px; margin-top: 12px; padding: 10px; font-family: monospace; }
+        #status { min-height: 1.4em; color: #5a4500; }
+        #status.error { color: #a12616; }
+    </style>
+</head>
+<body>
+    <h1>Câu 1: Đọc dữ liệu fakestoreapi → bổ sung màu sắc, tồn kho → products.xml</h1>
+    <p>Mở trang này bằng Live Server (cần Internet). Bấm <b>Tạo XML</b>, sau đó <b>Tải products.xml</b> và chép vào thư mục <code>datasets/</code>.</p>
+    <button id="btnBuild" type="button">Tạo XML</button>
+    <button id="btnDownload" type="button">Tải products.xml</button>
+    <p id="status" role="status" aria-live="polite"></p>
+    <textarea id="txtXML" readonly></textarea>
+
+    <script>
+        // Dữ liệu bổ sung (không có trong API): màu sắc, kích cỡ theo danh mục
+        var COLORS = {
+            "men's clothing":   [["Đen", "#222222"], ["Trắng", "#f5f5f5"], ["Xanh navy", "#1f3a5f"]],
+            "women's clothing": [["Đen", "#222222"], ["Hồng", "#e8a0bf"], ["Trắng", "#f5f5f5"]],
+            "jewelery":         [["Vàng", "#d4af37"], ["Bạc", "#c0c0c0"]],
+            "electronics":      [["Đen", "#222222"], ["Xám", "#888888"]]
+        };
+        var SIZES = {
+            "men's clothing":   ["S", "M", "L", "XL"],
+            "women's clothing": ["S", "M", "L"],
+            "jewelery":         ["Free size"],
+            "electronics":      ["Tiêu chuẩn"]
+        };
+        var xmlText = "";
+
+        function addTextNode(doc, parent, tag, text) {
+            var node = doc.createElement(tag);
+            node.appendChild(doc.createTextNode(text));
+            parent.appendChild(node);
+            return node;
+        }
+
+        function buildXML() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "https://fakestoreapi.com/products", true);
+            xhr.timeout = 15000;
+            document.getElementById("btnBuild").disabled = true;
+            xmlText = "";
+            document.getElementById("txtXML").value = "";
+            setStatus("Đang tải dữ liệu từ Fake Store API...");
+            xhr.onload = function () {
+                document.getElementById("btnBuild").disabled = false;
+                if (xhr.status < 200 || xhr.status >= 300) {
+                    setStatus("Không tải được API (HTTP " + xhr.status + "). Hãy thử lại khi có kết nối Internet.", true);
+                    return;
+                }
+                var products;
+                try {
+                    products = JSON.parse(xhr.responseText);
+                } catch (error) {
+                    setStatus("Dữ liệu API trả về không phải JSON hợp lệ.", true);
+                    return;
+                }
+                if (!Array.isArray(products) || products.length === 0) {
+                    setStatus("API không trả về danh sách sản phẩm hợp lệ.", true);
+                    return;
+                }
+
+                var xmlDoc = document.implementation.createDocument("", "products", null);
+                var root = xmlDoc.documentElement;
+                for (var i = 0; i < products.length; i++) {
+                    var p = products[i];
+                    var cl = COLORS[p.category];
+                    var sizes = SIZES[p.category];
+                    if (!cl || !sizes || !p.rating) {
+                        setStatus("Danh mục hoặc dữ liệu đánh giá chưa được hỗ trợ: " + p.category, true);
+                        return;
+                    }
+                    var node = xmlDoc.createElement("product");
+                    node.setAttribute("id", p.id);
+                    addTextNode(xmlDoc, node, "title", p.title);
+                    addTextNode(xmlDoc, node, "price", p.price);
+                    addTextNode(xmlDoc, node, "description", p.description);
+                    addTextNode(xmlDoc, node, "category", p.category);
+                    addTextNode(xmlDoc, node, "image", p.image);
+
+                    var rating = xmlDoc.createElement("rating");
+                    addTextNode(xmlDoc, rating, "rate", p.rating.rate);
+                    addTextNode(xmlDoc, rating, "count", p.rating.count);
+                    node.appendChild(rating);
+
+                    var colors = xmlDoc.createElement("colors");
+                    for (var c = 0; c < cl.length; c++) {
+                        var color = addTextNode(xmlDoc, colors, "color", cl[c][0]);
+                        color.setAttribute("hex", cl[c][1]);
+                    }
+                    node.appendChild(colors);
+
+                    var sizeList = xmlDoc.createElement("sizes");
+                    for (var s = 0; s < sizes.length; s++) {
+                        addTextNode(xmlDoc, sizeList, "size", sizes[s]);
+                    }
+                    node.appendChild(sizeList);
+
+                    addTextNode(xmlDoc, node, "stock", Math.floor(Math.random() * 61));
+                    root.appendChild(node);
+                }
+                xmlText = '<?xml version="1.0" encoding="UTF-8"?>\n' + new XMLSerializer().serializeToString(xmlDoc);
+                document.getElementById("txtXML").value = xmlText;
+                setStatus("Đã tạo XML cho " + products.length + " sản phẩm. Tải file và chép vào datasets/.");
+            };
+            xhr.onerror = function () {
+                document.getElementById("btnBuild").disabled = false;
+                setStatus("Không kết nối được Fake Store API. Kiểm tra Internet/CORS rồi thử lại.", true);
+            };
+            xhr.ontimeout = function () {
+                document.getElementById("btnBuild").disabled = false;
+                setStatus("Yêu cầu tải API quá thời gian chờ. Hãy thử lại.", true);
+            };
+            xhr.send();
+        }
+
+        function setStatus(message, isError) {
+            var status = document.getElementById("status");
+            status.textContent = message;
+            status.className = isError ? "error" : "";
+        }
+
+        function downloadXML() {
+            if (xmlText === "") {
+                setStatus("Hãy bấm 'Tạo XML' và đợi tải dữ liệu thành công trước.", true);
+                return;
+            }
+            var blob = new Blob([xmlText], { type: "application/xml" });
+            var url = URL.createObjectURL(blob);
+            var a = document.createElement("a");
+            a.href = url;
+            a.download = "products.xml";
+            a.click();
+            setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+        }
+
+        document.getElementById("btnBuild").addEventListener("click", buildXML);
+        document.getElementById("btnDownload").addEventListener("click", downloadXML);
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "KH001",
+    "username": "khachhang1",
+    "password": "123456",
+    "fullname": "Nguyễn Văn An",
+    "email": "an.nguyen@gmail.com",
+    "phone": "0912345678",
+    "address": "12 Nguyễn Huệ, Quận 1, TP.HCM"
+  },
+  {
+    "id": "KH002",
+    "username": "khachhang2",
+    "password": "123456",
+    "fullname": "Lê Thị Bích",
+    "email": "bich.le@gmail.com",
+    "phone": "0987654321",
+    "address": "45 Lê Lợi, Quận 3, TP.HCM"
+  },
+  {
+    "id": "KH003",
+    "username": "khachhang3",
+    "password": "123456",
+    "fullname": "Trần Hoàng Cường",
+    "email": "cuong.tran@gmail.com",
+    "phone": "0935111222",
+    "address": "78 Điện Biên Phủ, Bình Thạnh, TP.HCM"
+  },
+  {
+    "id": "KH004",
+    "username": "khachhang4",
+    "password": "123456",
+    "fullname": "Phạm Thu Dung",
+    "email": "dung.pham@gmail.com",
+    "phone": "0978222333",
+    "address": "9 Võ Văn Ngân, TP. Thủ Đức, TP.HCM"
+  },
+  {
+    "id": "KH005",
+    "username": "khachhang5",
+    "password": "123456",
+    "fullname": "Võ Minh Đức",
+    "email": "duc.vo@gmail.com",
+    "phone": "0866333444",
+    "address": "101 Cách Mạng Tháng 8, Quận 10, TP.HCM"
+  },
+  {
+    "id": "KH006",
+    "username": "khachhang6",
+    "password": "123456",
+    "fullname": "Đặng Ngọc Hà",
+    "email": "ha.dang@gmail.com",
+    "phone": "0345444555",
+    "address": "23 Phan Xích Long, Phú Nhuận, TP.HCM"
+  }
+]

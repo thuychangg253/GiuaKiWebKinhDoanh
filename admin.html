@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Admin - Mini Shop - Nguyễn Thị Thùy Trang - K244060747</title>
+    <link rel="stylesheet" href="css/admin.css"/>
+</head>
+<body>
+    <header class="ad-header">
+        <h1>Dashboard Admin</h1>
+        <nav>
+            <a href="index.html">← Về trang bán hàng</a>
+            <span id="adminInfo"></span>
+            <button id="btnLogout" type="button" style="display:none">Đăng xuất</button>
+        </nav>
+    </header>
+
+    <!-- ================= MÀN HÌNH ĐĂNG NHẬP ================= -->
+    <section id="loginView" class="login-box">
+        <h2>Đăng nhập quản trị</h2>
+        <form id="frmLogin" autocomplete="off">
+            <label for="txtUser">Tên đăng nhập</label>
+            <input type="text" id="txtUser" name="txtUser" required placeholder="admin"/>
+            <label for="txtPass">Mật khẩu</label>
+            <input type="password" id="txtPass" name="txtPass" required placeholder="••••••"/>
+            <p id="loginError" class="err"></p>
+            <button type="submit" class="btn">Đăng nhập</button>
+        </form>
+        <p class="hint">Tài khoản thử nghiệm (employees.json): <b>admin</b> / <b>admin123</b><br/>
+        Nhân viên bán hàng (<b>nv_lan</b> / lan123) không có quyền vào trang quản trị.</p>
+    </section>
+
+    <!-- ================= DASHBOARD ================= -->
+    <main id="dashView" style="display:none">
+        <section class="stats" id="statCards"></section>
+
+        <section class="panel">
+            <div class="panel-head">
+                <h2>Quản lý đơn hàng</h2>
+                <div class="tools">
+                    <input type="text" id="txtFind" placeholder="Tìm theo mã đơn / khách hàng..."/>
+                    <select id="selStatus">
+                        <option value="">Tất cả trạng thái</option>
+                        <option>Hoàn thành</option>
+                        <option>Đang giao</option>
+                        <option>Chờ xử lý</option>
+                    </select>
+                    <button id="btnResetWeb" type="button" class="btn light">Xóa đơn tạo từ web</button>
+                </div>
+            </div>
+            <div class="table-wrap">
+                <table id="tbOrders">
+                    <thead>
+                        <tr><th>Mã đơn</th><th>Ngày tạo</th><th>Nhân viên</th><th>Khách hàng</th><th>SL SP</th><th>Tổng tiền</th><th>Trạng thái</th><th></th></tr>
+                    </thead>
+                    <tbody id="tbOrdersBody"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="two-col">
+            <div class="panel">
+                <h2>Sản phẩm bán chạy</h2>
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>#</th><th>Sản phẩm</th><th>Đã bán</th><th>Doanh thu</th></tr></thead>
+                        <tbody id="tbTopProducts"></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="panel">
+                <h2>Doanh thu theo danh mục</h2>
+                <div id="categoryChart"></div>
+                <h2 style="margin-top:20px">Tồn kho thấp (≤ 5)</h2>
+                <ul id="lowStock"></ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="ad-footer">
+        <p>© 2026 Mini Shop — Sinh viên: <strong>Nguyễn Thị Thùy Trang</strong> — MSSV: <strong>K244060747</strong></p>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Chi tiết sản phẩm - Mini Shop</title>
+    <link rel="stylesheet" href="css/main.css"/>
+</head>
+<body>
+    <header class="site-header">
+        <h1 class="logo"><a href="index.html">Mini Shop</a></h1>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="index.html#products">Sản phẩm</a></li>
+                <li><a href="admin.html">Quản trị (Admin)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="detail-page">
+        <a class="detail-back" href="index.html#products">&larr; Quay lại danh sách sản phẩm</a>
+        <p id="detailMessage" class="empty">Đang tải sản phẩm...</p>
+
+        <div id="productDetail" class="product-detail" hidden>
+            <div class="detail-image"><img id="detailImage" alt=""/></div>
+            <section class="detail-info" aria-labelledby="detailTitle">
+                <p id="detailCategory" class="detail-category"></p>
+                <h2 id="detailTitle"></h2>
+                <p id="detailRating" class="detail-rating"></p>
+                <p id="detailPrice" class="p-price"></p>
+                <p id="detailDescription" class="detail-description"></p>
+                <p id="detailColors" class="detail-meta"></p>
+                <p id="detailSizes" class="detail-meta"></p>
+                <p id="detailStock" class="detail-stock"></p>
+            </section>
+        </div>
+
+        <section id="reviewsSection" class="reviews-section" hidden>
+            <div class="reviews-heading">
+                <div>
+                    <p class="detail-category">Ý KIẾN KHÁCH HÀNG</p>
+                    <h2>Đánh giá sản phẩm</h2>
+                </div>
+                <p id="reviewsSummary" class="reviews-summary"></p>
+            </div>
+            <div class="reviews-layout">
+                <form id="reviewForm" class="review-form">
+                    <h3>Viết đánh giá</h3>
+                    <label for="reviewName">Tên của bạn</label>
+                    <input id="reviewName" name="reviewName" type="text" maxlength="60" required autocomplete="name"/>
+
+                    <label for="reviewRating">Số sao</label>
+                    <select id="reviewRating" name="reviewRating" required>
+                        <option value="5">5 sao - Rất hài lòng</option>
+                        <option value="4">4 sao - Hài lòng</option>
+                        <option value="3">3 sao - Bình thường</option>
+                        <option value="2">2 sao - Chưa hài lòng</option>
+                        <option value="1">1 sao - Không hài lòng</option>
+                    </select>
+
+                    <label for="reviewComment">Nhận xét</label>
+                    <textarea id="reviewComment" name="reviewComment" rows="4" maxlength="500" required></textarea>
+                    <button class="btn btn-add" type="submit">Gửi đánh giá</button>
+                    <p class="review-storage-note">Đánh giá mới được lưu trên trình duyệt này.</p>
+                </form>
+                <div id="reviewList" class="review-list" aria-live="polite"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Mini Shop &mdash; Sinh viên: <strong>Nguyễn Thị Thùy Trang</strong> &mdash; MSSV: <strong>K244060747</strong></p>
+    </footer>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="js/common.js"></script>
+    <script src="js/review.js"></script>
+    <script src="js/product-detail.js"></script>
+</body>
+</html>

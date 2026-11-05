@@ -1,0 +1,64 @@
+/* ===== admin.css - Câu 8: giao diện quản trị ===== */
+:root { --yellow: #ffd84d; --yellow-dark: #e8ae00; --yellow-soft: #fff3bd; --ink: #3f3108; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Times New Roman", Times, serif; background: #fffdf5; color: #332b17; }
+button, input, select { font: inherit; }
+h1, h2 { margin: 0; }
+.ad-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;
+    background: var(--yellow); color: var(--ink); padding: 12px 24px; box-shadow: 0 2px 8px rgba(79, 58, 0, .16); }
+.ad-header h1 { font-size: 20px; }
+.ad-header nav { display: flex; align-items: center; gap: 14px; }
+.ad-header a { color: var(--ink); text-decoration: none; }
+.ad-header button { background: #765900; color: #fff8d8; border: 0; border-radius: 6px; padding: 6px 12px; cursor: pointer; }
+main { max-width: 1300px; margin: 20px auto; padding: 0 16px; }
+
+/* login */
+.login-box { max-width: 380px; margin: 60px auto; background: #fff; padding: 24px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,.15); }
+.login-box h2 { margin-bottom: 10px; }
+.login-box label { display: block; margin: 12px 0 4px; font-weight: bold; font-size: 14px; }
+.login-box input { width: 100%; padding: 9px; border: 1px solid #bbb; border-radius: 6px; font-size: 14px; }
+.login-box .btn { width: 100%; margin-top: 8px; }
+.err { color: #d33; font-size: 13px; min-height: 16px; margin: 8px 0 0; }
+.hint { font-size: 12px; color: #666; margin-top: 14px; line-height: 1.6; }
+.btn { background: var(--yellow-dark); color: #302400; border: 0; border-radius: 6px; padding: 10px 14px; cursor: pointer; font-size: 14px; font-weight: bold; }
+.btn.light { background: var(--yellow-soft); color: var(--ink); padding: 8px 12px; }
+
+/* stat cards */
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 20px; }
+.stat { background: #fff; border-radius: 10px; padding: 16px; box-shadow: 0 1px 4px rgba(0,0,0,.1); border-left: 6px solid var(--yellow-dark); }
+.stat .num { font-size: 26px; font-weight: bold; margin-top: 6px; }
+.stat .lbl { color: #666; font-size: 14px; }
+.stat:nth-child(2) { border-color: #f2c94c; }
+.stat:nth-child(3) { border-color: #d9a900; }
+.stat:nth-child(4) { border-color: #b98500; }
+
+/* panels + tables */
+.panel { background: #fff; border-radius: 10px; padding: 16px; box-shadow: 0 1px 4px rgba(0,0,0,.1); margin-bottom: 20px; }
+.panel-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 12px; align-items: center; }
+.tools { display: flex; gap: 8px; flex-wrap: wrap; }
+.tools input, .tools select { padding: 8px; border: 1px solid #bbb; border-radius: 6px; }
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { border-bottom: 1px solid #e3e6ec; padding: 8px 10px; text-align: left; }
+th { background: #fff3bd; }
+tbody tr.order-row { cursor: pointer; }
+tbody tr.order-row:hover { background: #fff9e2; }
+tr.detail-row td { background: #fafbfd; }
+.detail-table { width: 100%; font-size: 13px; }
+.status { padding: 3px 10px; border-radius: 12px; font-size: 12px; color: #fff; white-space: nowrap; }
+.status.done { background: #2b8a3e; }
+.status.ship { background: #1971c2; }
+.status.wait { background: #e67700; }
+.tag-web { background: #9c36b5; color: #fff; font-size: 11px; padding: 1px 6px; border-radius: 4px; margin-left: 4px; }
+.two-col { display: grid; grid-template-columns: 1.3fr 1fr; gap: 20px; }
+
+/* bar chart bằng CSS */
+.bar-row { margin: 10px 0; font-size: 13px; }
+.bar-bg { background: #e9ecf3; border-radius: 6px; height: 18px; margin-top: 4px; }
+.bar { background: linear-gradient(90deg, #e8ae00, #ffe27a); height: 100%; border-radius: 6px; min-width: 2px; }
+#lowStock { padding-left: 18px; font-size: 14px; line-height: 1.7; }
+.ad-footer { background: #5a4500; color: #fff8df; text-align: center; padding: 16px; margin-top: 30px; font-size: 14px; }
+.ad-footer p { margin: 0; }
+
+@media (max-width: 1024px) { .stats { grid-template-columns: repeat(2, 1fr); } .two-col { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .stats { grid-template-columns: 1fr; } }

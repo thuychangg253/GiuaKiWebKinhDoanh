@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reviews>
+  <review>
+    <review_id>RV001</review_id>
+    <product_id>15</product_id>
+    <customer_id>KH003</customer_id>
+    <rating>5</rating>
+    <comment>Rất hài lòng, sẽ mua lại</comment>
+    <date>2026-11-11</date>
+  </review>
+  <review>
+    <review_id>RV002</review_id>
+    <product_id>19</product_id>
+    <customer_id>KH003</customer_id>
+    <rating>4</rating>
+    <comment>Khá tốt, đáng tiền</comment>
+    <date>2026-10-12</date>
+  </review>
+  <review>
+    <review_id>RV003</review_id>
+    <product_id>9</product_id>
+    <customer_id>KH003</customer_id>
+    <rating>2</rating>
+    <comment>Chất lượng thấp hơn giá tiền</comment>
+    <date>2026-11-05</date>
+  </review>
+  <review>
+    <review_id>RV004</review_id>
+    <product_id>17</product_id>
+    <customer_id>KH005</customer_id>
+    <rating>3</rating>
+    <comment>Tạm được, như kỳ vọng</comment>
+    <date>2026-11-03</date>
+  </review>
+  <review>
+    <review_id>RV005</review_id>
+    <product_id>5</product_id>
+    <customer_id>KH005</customer_id>
+    <rating>3</rating>
+    <comment>Bình thường, không có gì đặc biệt</comment>
+    <date>2026-11-15</date>
+  </review>
+  <review>
+    <review_id>RV006</review_id>
+    <product_id>13</product_id>
+    <customer_id>KH002</customer_id>
+    <rating>4</rating>
+    <comment>Khá tốt, đáng tiền</comment>
+    <date>2026-09-26</date>
+  </review>
+  <review>
+    <review_id>RV007</review_id>
+    <product_id>14</product_id>
+    <customer_id>KH002</customer_id>
+    <rating>5</rating>
+    <comment>Rất hài lòng, sẽ mua lại</comment>
+    <date>2026-10-05</date>
+  </review>
+  <review>
+    <review_id>RV008</review_id>
+    <product_id>17</product_id>
+    <customer_id>KH002</customer_id>
+    <rating>4</rating>
+    <comment>Đóng gói cẩn thận, dùng ổn</comment>
+    <date>2026-10-01</date>
+  </review>
+  <review>
+    <review_id>RV009</review_id>
+    <product_id>16</product_id>
+    <customer_id>KH005</customer_id>
+    <rating>1</rating>
+    <comment>Rất thất vọng, không giống hình</comment>
+    <date>2026-11-20</date>
+  </review>
+  <review>
+    <review_id>RV010</review_id>
+    <product_id>3</product_id>
+    <customer_id>KH001</customer_id>
+    <rating>3</rating>
+    <comment>Tạm được, như kỳ vọng</comment>
+    <date>2026-11-17</date>
+  </review>
+  <review>
+    <review_id>RV011</review_id>
+    <product_id>5</product_id>
+    <customer_id>KH004</customer_id>
+    <rating>5</rating>
+    <comment>Sản phẩm rất tốt, đúng mô tả</comment>
+    <date>2026-11-06</date>
+  </review>
+  <review>
+    <review_id>RV012</review_id>
+    <product_id>18</product_id>
+    <customer_id>KH003</customer_id>
+    <rating>3</rating>
+    <comment>Tạm được, như kỳ vọng</comment>
+    <date>2026-10-14</date>
+  </review>
+  <review>
+    <review_id>RV013</review_id>
+    <product_id>5</product_id>
+    <customer_id>KH002</customer_id>
+    <rating>4</rating>
+    <comment>Đóng gói cẩn thận, dùng ổn</comment>
+    <date>2026-09-24</date>
+  </review>
+  <review>
+    <review_id>RV014</review_id>
+    <product_id>12</product_id>
+    <customer_id>KH005</customer_id>
+    <rating>4</rating>
+    <comment>Đóng gói cẩn thận, dùng ổn</comment>
+    <date>2026-09-15</date>
+  </review>
+  <review>
+    <review_id>RV015</review_id>
+    <product_id>10</product_id>
+    <customer_id>KH001</customer_id>
+    <rating>4</rating>
+    <comment>Đóng gói cẩn thận, dùng ổn</comment>
+    <date>2026-11-04</date>
+  </review>
+  <review>
+    <review_id>RV016</review_id>
+    <product_id>1</product_id>
+    <customer_id>KH003</customer_id>
+    <rating>5</rating>
+    <comment>Chất lượng tuyệt vời, giao hàng nhanh</comment>
+    <date>2026-09-23</date>
+  </review>
+  <review>
+    <review_id>RV017</review_id>
+    <product_id>13</product_id>
+    <customer_id>KH005</customer_id>
+    <rating>1</rating>
+    <comment>Rất thất vọng, không giống hình</comment>
+    <date>2026-10-10</date>
+  </review>
+  <review>
+    <review_id>RV018</review_id>
+    <product_id>2</product_id>
+    <customer_id>KH003</customer_id>
+    <rating>3</rating>
+    <comment>Bình thường, không có gì đặc biệt</comment>
+    <date>2026-11-21</date>
+  </review>
+  <review>
+    <review_id>RV019</review_id>
+    <product_id>6</product_id>
+    <customer_id>KH002</customer_id>
+    <rating>4</rating>
+    <comment>Tốt, chỉ hơi chậm giao</comment>
+    <date>2026-09-14</date>
+  </review>
+  <review>
+    <review_id>RV020</review_id>
+    <product_id>7</product_id>
+    <customer_id>KH002</customer_id>
+    <rating>4</rating>
+    <comment>Đóng gói cẩn thận, dùng ổn</comment>
+    <date>2026-09-23</date>
+  </review>
+  <review>
+    <review_id>RV021</review_id>
+    <product_id>11</product_id>
+    <customer_id>KH004</customer_id>
+    <rating>4</rating>
+    <comment>Tốt, chỉ hơi chậm giao</comment>
+    <date>2026-09-13</date>
+  </review>
+  <review>
+    <review_id>RV022</review_id>
+    <product_id>16</product_id>
+    <customer_id>KH002</customer_id>
+    <rating>5</rating>
+    <comment>Chất lượng tuyệt vời, giao hàng nhanh</comment>
+    <date>2026-10-13</date>
+  </review>
+  <review>
+    <review_id>RV023</review_id>
+    <product_id>18</product_id>
+    <customer_id>KH002</customer_id>
+    <rating>3</rating>
+    <comment>Bình thường, không có gì đặc biệt</comment>
+    <date>2026-10-04</date>
+  </review>
+  <review>
+    <review_id>RV024</review_id>
+    <product_id>5</product_id>
+    <customer_id>KH003</customer_id>
+    <rating>5</rating>
+    <comment>Chất lượng tuyệt vời, giao hàng nhanh</comment>
+    <date>2026-11-21</date>
+  </review>
+  <review>
+    <review_id>RV025</review_id>
+    <product_id>18</product_id>
+    <customer_id>KH006</customer_id>
+    <rating>5</rating>
+    <comment>Chất lượng tuyệt vời, giao hàng nhanh</comment>
+    <date>2026-09-09</date>
+  </review>
+  <review>
+    <review_id>RV026</review_id>
+    <product_id>10</product_id>
+    <customer_id>KH006</customer_id>
+    <rating>5</rating>
+    <comment>Rất hài lòng, sẽ mua lại</comment>
+    <date>2026-09-19</date>
+  </review>
+  <review>
+    <review_id>RV027</review_id>
+    <product_id>16</product_id>
+    <customer_id>KH004</customer_id>
+    <rating>5</rating>
+    <comment>Sản phẩm rất tốt, đúng mô tả</comment>
+    <date>2026-11-25</date>
+  </review>
+  <review>
+    <review_id>RV028</review_id>
+    <product_id>15</product_id>
+    <customer_id>KH006</customer_id>
+    <rating>3</rating>
+    <comment>Bình thường, không có gì đặc biệt</comment>
+    <date>2026-10-19</date>
+  </review>
+  <review>
+    <review_id>RV029</review_id>
+    <product_id>19</product_id>
+    <customer_id>KH001</customer_id>
+    <rating>4</rating>
+    <comment>Đóng gói cẩn thận, dùng ổn</comment>
+    <date>2026-11-08</date>
+  </review>
+  <review>
+    <review_id>RV030</review_id>
+    <product_id>14</product_id>
+    <customer_id>KH001</customer_id>
+    <rating>4</rating>
+    <comment>Khá tốt, đáng tiền</comment>
+    <date>2026-10-12</date>
+  </review>
+  <review>
+    <review_id>RV031</review_id>
+    <product_id>11</product_id>
+    <customer_id>KH006</customer_id>
+    <rating>4</rating>
+    <comment>Đóng gói cẩn thận, dùng ổn</comment>
+    <date>2026-09-19</date>
+  </review>
+  <review>
+    <review_id>RV032</review_id>
+    <product_id>17</product_id>
+    <customer_id>KH003</customer_id>
+    <rating>3</rating>
+    <comment>Bình thường, không có gì đặc biệt</comment>
+    <date>2026-09-04</date>
+  </review>
+  <review>
+    <review_id>RV033</review_id>
+    <product_id>9</product_id>
+    <customer_id>KH005</customer_id>
+    <rating>5</rating>
+    <comment>Rất hài lòng, sẽ mua lại</comment>
+    <date>2026-10-05</date>
+  </review>
+  <review>
+    <review_id>RV034</review_id>
+    <product_id>7</product_id>
+    <customer_id>KH005</customer_id>
+    <rating>5</rating>
+    <comment>Sản phẩm rất tốt, đúng mô tả</comment>
+    <date>2026-10-08</date>
+  </review>
+  <review>
+    <review_id>RV035</review_id>
+    <product_id>18</product_id>
+    <customer_id>KH005</customer_id>
+    <rating>5</rating>
+    <comment>Chất lượng tuyệt vời, giao hàng nhanh</comment>
+    <date>2026-09-27</date>
+  </review>
+  <review>
+    <review_id>RV036</review_id>
+    <product_id>6</product_id>
+    <customer_id>KH003</customer_id>
+    <rating>4</rating>
+    <comment>Đóng gói cẩn thận, dùng ổn</comment>
+    <date>2026-09-11</date>
+  </review>
+  <review>
+    <review_id>RV037</review_id>
+    <product_id>3</product_id>
+    <customer_id>KH005</customer_id>
+    <rating>4</rating>
+    <comment>Tốt, chỉ hơi chậm giao</comment>
+    <date>2026-09-15</date>
+  </review>
+  <review>
+    <review_id>RV038</review_id>
+    <product_id>3</product_id>
+    <customer_id>KH003</customer_id>
+    <rating>4</rating>
+    <comment>Tốt, chỉ hơi chậm giao</comment>
+    <date>2026-10-09</date>
+  </review>
+  <review>
+    <review_id>RV039</review_id>
+    <product_id>20</product_id>
+    <customer_id>KH001</customer_id>
+    <rating>4</rating>
+    <comment>Tốt, chỉ hơi chậm giao</comment>
+    <date>2026-10-11</date>
+  </review>
+  <review>
+    <review_id>RV040</review_id>
+    <product_id>8</product_id>
+    <customer_id>KH002</customer_id>
+    <rating>3</rating>
+    <comment>Bình thường, không có gì đặc biệt</comment>
+    <date>2026-10-14</date>
+  </review>
+  <review>
+    <review_id>RV041</review_id>
+    <product_id>1</product_id>
+    <customer_id>KH002</customer_id>
+    <rating>1</rating>
+    <comment>Rất thất vọng, không giống hình</comment>
+    <date>2026-09-17</date>
+  </review>
+  <review>
+    <review_id>RV042</review_id>
+    <product_id>2</product_id>
+    <customer_id>KH002</customer_id>
+    <rating>5</rating>
+    <comment>Chất lượng tuyệt vời, giao hàng nhanh</comment>
+    <date>2026-10-01</date>
+  </review>
+  <review>
+    <review_id>RV043</review_id>
+    <product_id>8</product_id>
+    <customer_id>KH003</customer_id>
+    <rating>4</rating>
+    <comment>Đóng gói cẩn thận, dùng ổn</comment>
+    <date>2026-09-24</date>
+  </review>
+  <review>
+    <review_id>RV044</review_id>
+    <product_id>2</product_id>
+    <customer_id>KH005</customer_id>
+    <rating>2</rating>
+    <comment>Chưa như mong đợi</comment>
+    <date>2026-09-18</date>
+  </review>
+  <review>
+    <review_id>RV045</review_id>
+    <product_id>13</product_id>
+    <customer_id>KH003</customer_id>
+    <rating>4</rating>
+    <comment>Đóng gói cẩn thận, dùng ổn</comment>
+    <date>2026-09-10</date>
+  </review>
+  <review>
+    <review_id>RV046</review_id>
+    <product_id>20</product_id>
+    <customer_id>KH004</customer_id>
+    <rating>5</rating>
+    <comment>Rất hài lòng, sẽ mua lại</comment>
+    <date>2026-09-20</date>
+  </review>
+  <review>
+    <review_id>RV047</review_id>
+    <product_id>11</product_id>
+    <customer_id>KH003</customer_id>
+    <rating>5</rating>
+    <comment>Sản phẩm rất tốt, đúng mô tả</comment>
+    <date>2026-10-15</date>
+  </review>
+  <review>
+    <review_id>RV048</review_id>
+    <product_id>20</product_id>
+    <customer_id>KH003</customer_id>
+    <rating>4</rating>
+    <comment>Tốt, chỉ hơi chậm giao</comment>
+    <date>2026-09-13</date>
+  </review>
+  <review>
+    <review_id>RV049</review_id>
+    <product_id>7</product_id>
+    <customer_id>KH003</customer_id>
+    <rating>5</rating>
+    <comment>Chất lượng tuyệt vời, giao hàng nhanh</comment>
+    <date>2026-09-18</date>
+  </review>
+  <review>
+    <review_id>RV050</review_id>
+    <product_id>13</product_id>
+    <customer_id>KH004</customer_id>
+    <rating>5</rating>
+    <comment>Rất hài lòng, sẽ mua lại</comment>
+    <date>2026-10-04</date>
+  </review>
+  <review>
+    <review_id>RV051</review_id>
+    <product_id>4</product_id>
+    <customer_id>KH002</customer_id>
+    <rating>5</rating>
+    <comment>Rất hài lòng, sẽ mua lại</comment>
+    <date>2026-09-25</date>
+  </review>
+  <review>
+    <review_id>RV052</review_id>
+    <product_id>12</product_id>
+    <customer_id>KH002</customer_id>
+    <rating>4</rating>
+    <comment>Đóng gói cẩn thận, dùng ổn</comment>
+    <date>2026-10-15</date>
+  </review>
+  <review>
+    <review_id>RV053</review_id>
+    <product_id>14</product_id>
+    <customer_id>KH003</customer_id>
+    <rating>4</rating>
+    <comment>Đóng gói cẩn thận, dùng ổn</comment>
+    <date>2026-10-18</date>
+  </review>
+  <review>
+    <review_id>RV054</review_id>
+    <product_id>9</product_id>
+    <customer_id>KH002</customer_id>
+    <rating>4</rating>
+    <comment>Khá tốt, đáng tiền</comment>
+    <date>2026-11-21</date>
+  </review>
+  <review>
+    <review_id>RV055</review_id>
+    <product_id>15</product_id>
+    <customer_id>KH002</customer_id>
+    <rating>5</rating>
+    <comment>Chất lượng tuyệt vời, giao hàng nhanh</comment>
+    <date>2026-10-28</date>
+  </review>
+  <review>
+    <review_id>RV056</review_id>
+    <product_id>8</product_id>
+    <customer_id>KH006</customer_id>
+    <rating>5</rating>
+    <comment>Rất hài lòng, sẽ mua lại</comment>
+    <date>2026-09-01</date>
+  </review>
+  <review>
+    <review_id>RV057</review_id>
+    <product_id>7</product_id>
+    <customer_id>KH004</customer_id>
+    <rating>5</rating>
+    <comment>Rất hài lòng, sẽ mua lại</comment>
+    <date>2026-10-21</date>
+  </review>
+  <review>
+    <review_id>RV058</review_id>
+    <product_id>10</product_id>
+    <customer_id>KH002</customer_id>
+    <rating>5</rating>
+    <comment>Sản phẩm rất tốt, đúng mô tả</comment>
+    <date>2026-09-27</date>
+  </review>
+  <review>
+    <review_id>RV059</review_id>
+    <product_id>10</product_id>
+    <customer_id>KH003</customer_id>
+    <rating>5</rating>
+    <comment>Chất lượng tuyệt vời, giao hàng nhanh</comment>
+    <date>2026-11-19</date>
+  </review>
+  <review>
+    <review_id>RV060</review_id>
+    <product_id>13</product_id>
+    <customer_id>KH006</customer_id>
+    <rating>4</rating>
+    <comment>Tốt, chỉ hơi chậm giao</comment>
+    <date>2026-10-02</date>
+  </review>
+  <review>
+    <review_id>RV061</review_id>
+    <product_id>14</product_id>
+    <customer_id>KH004</customer_id>
+    <rating>1</rating>
+    <comment>Rất thất vọng, không giống hình</comment>
+    <date>2026-10-27</date>
+  </review>
+  <review>
+    <review_id>RV062</review_id>
+    <product_id>12</product_id>
+    <customer_id>KH006</customer_id>
+    <rating>3</rating>
+    <comment>Bình thường, không có gì đặc biệt</comment>
+    <date>2026-10-02</date>
+  </review>
+  <review>
+    <review_id>RV063</review_id>
+    <product_id>17</product_id>
+    <customer_id>KH001</customer_id>
+    <rating>5</rating>
+    <comment>Rất hài lòng, sẽ mua lại</comment>
+    <date>2026-11-10</date>
+  </review>
+  <review>
+    <review_id>RV064</review_id>
+    <product_id>19</product_id>
+    <customer_id>KH002</customer_id>
+    <rating>5</rating>
+    <comment>Chất lượng tuyệt vời, giao hàng nhanh</comment>
+    <date>2026-10-04</date>
+  </review>
+</reviews>
